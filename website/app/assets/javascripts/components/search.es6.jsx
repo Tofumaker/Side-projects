@@ -7,22 +7,43 @@ class Search extends React.Component{
     }
   }
 
-
   componentDidMount(){
+    this.setState({
+      arr: this.props.arr
+    })
+  }
+
+  bubbleSort(){
     $.ajax({
       url: '/searches/sort',
-      method: "get"
+      method: "get",
+      data: {arr: this.state.arr}
     }).done((response) => {
-      alert("hi")
-      debugger
+      this.setState({
+        arr: response.arr,
+        sorted: response.sorted
+      })
     })
   }
 
   render(){
     return(
-      <div>
-        <h1>THIS IS A TEST</h1>
+      <div onClick={(event) => this.bubbleSort(event)}>
+        [
+        <span> {this.state.arr[0]} </span>,
+        <span> {this.state.arr[1]} </span>,
+        <span> {this.state.arr[2]} </span>,
+        <span> {this.state.arr[3]} </span>,
+        <span> {this.state.arr[4]} </span>,
+        <span> {this.state.arr[5]} </span>,
+        <span> {this.state.arr[6]} </span>,
+        <span> {this.state.arr[7]} </span>,
+        <span> {this.state.arr[8]} </span>,
+        <span> {this.state.arr[9]} </span>
+        ]
       </div>
     )
   }
+
+
 }
