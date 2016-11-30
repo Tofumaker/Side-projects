@@ -29,18 +29,16 @@ class Search extends React.Component{
   render(){
     return(
       <div onClick={(event) => this.bubbleSort(event)}>
-        [
-        <span> {this.state.arr[0]} </span>,
-        <span> {this.state.arr[1]} </span>,
-        <span> {this.state.arr[2]} </span>,
-        <span> {this.state.arr[3]} </span>,
-        <span> {this.state.arr[4]} </span>,
-        <span> {this.state.arr[5]} </span>,
-        <span> {this.state.arr[6]} </span>,
-        <span> {this.state.arr[7]} </span>,
-        <span> {this.state.arr[8]} </span>,
-        <span> {this.state.arr[9]} </span>
-        ]
+        <span className = "search-array-block z-depth-1"> {this.state.arr[0]} </span>
+        <span className = "search-array-block z-depth-1"> {this.state.arr[1]} </span>
+        <span className = "search-array-block z-depth-1"> {this.state.arr[2]} </span>
+        <span className = "search-array-block z-depth-1"> {this.state.arr[3]} </span>
+        <span className = "search-array-block z-depth-1"> {this.state.arr[4]} </span>
+        <span className = "search-array-block z-depth-1"> {this.state.arr[5]} </span>
+        <span className = "search-array-block z-depth-1"> {this.state.arr[6]} </span>
+        <span className = "search-array-block z-depth-1"> {this.state.arr[7]} </span>
+        <span className = "search-array-block z-depth-1"> {this.state.arr[8]} </span>
+        <span className = "search-array-block z-depth-1"> {this.state.arr[9]} </span>
       </div>
     )
   }
