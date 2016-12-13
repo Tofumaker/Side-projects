@@ -28,17 +28,30 @@ class Search extends React.Component{
 
   render(){
     return(
-      <div onClick={(event) => this.bubbleSort(event)}>
-        <span className = "search-array-block z-depth-1"> {this.state.arr[0]} </span>
-        <span className = "search-array-block z-depth-1"> {this.state.arr[1]} </span>
-        <span className = "search-array-block z-depth-1"> {this.state.arr[2]} </span>
-        <span className = "search-array-block z-depth-1"> {this.state.arr[3]} </span>
-        <span className = "search-array-block z-depth-1"> {this.state.arr[4]} </span>
-        <span className = "search-array-block z-depth-1"> {this.state.arr[5]} </span>
-        <span className = "search-array-block z-depth-1"> {this.state.arr[6]} </span>
-        <span className = "search-array-block z-depth-1"> {this.state.arr[7]} </span>
-        <span className = "search-array-block z-depth-1"> {this.state.arr[8]} </span>
-        <span className = "search-array-block z-depth-1"> {this.state.arr[9]} </span>
+      <div>
+        <div className = "row" onClick={(event) => this.bubbleSort(event)}>
+          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[0]} </div>
+          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[1]} </div>
+          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[2]} </div>
+          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[3]} </div>
+          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[4]} </div>
+          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[5]} </div>
+          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[6]} </div>
+          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[7]} </div>
+          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[8]} </div>
+          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[9]} </div>
+        </div>
+        <div className = "row">
+          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+        </div>
       </div>
     )
   }

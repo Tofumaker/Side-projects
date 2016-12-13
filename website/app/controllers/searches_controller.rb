@@ -9,6 +9,9 @@ class SearchesController < ApplicationController
   end
 
   def sort
+    def sort_array()
+
+    end
     @arr = params[:arr]
     i = 0
     @sorted = true
@@ -23,7 +26,6 @@ class SearchesController < ApplicationController
       arr: @arr,
       sorted: @sorted
     }
-    p @arr
     if request.xhr?
       render json: @response
     end
