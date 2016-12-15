@@ -3,7 +3,9 @@ class Search extends React.Component{
     super()
     this.state = {
       arr: [],
-      sorted: false
+      sorted: false,
+      swapPosition: "",
+      arrowArray: ["none","none", "none", "none", "none", "none", "none", "none", "none", "none"]
     }
   }
 
@@ -14,16 +16,27 @@ class Search extends React.Component{
   }
 
   bubbleSort(){
-    $.ajax({
-      url: '/searches/sort',
-      method: "get",
-      data: {arr: this.state.arr}
-    }).done((response) => {
-      this.setState({
-        arr: response.arr,
-        sorted: response.sorted
+    if (this.state.sorted == true){
+      alert("Array Sorted!")
+    }
+    else {
+      $.ajax({
+        url: '/searches/sort',
+        method: "get",
+        data: {
+                arr: this.state.arr,
+                swapPosition: this.state.swapPosition
+              }
+      }).done((response) => {
+        this.setState({
+          arr: response.arr,
+          sorted: response.sorted,
+          swapPosition: response.swapPosition,
+          arrowArray: response.arrow_array
+        })
       })
-    })
+    }
+
   }
 
   render(){
@@ -42,19 +55,18 @@ class Search extends React.Component{
           <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[9]} </div>
         </div>
         <div className = "row">
-          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
-          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
-          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
-          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
-          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
-          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
-          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
-          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
-          <div className = "col s1 m1 l1 arrows-container"><img className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[0]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[1]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[2]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[3]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[4]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[5]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[6]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[7]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[8]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
         </div>
       </div>
     )
   }
-
 
 }
