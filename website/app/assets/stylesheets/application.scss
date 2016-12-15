@@ -15,9 +15,17 @@
  *= require_self
  */
 
-span.search-array-block{
+div.search-array-block{
   font-size: 4vw;
   margin: 2px;
   background-color: teal;
+}
 
+img.crossed-arrows{
+  width: 12vw;
+  display: none;
+}
+
+div.arrows-container{
+  margin: 2px;
 }
