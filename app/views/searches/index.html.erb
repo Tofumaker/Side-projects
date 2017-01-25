@@ -1,16 +1,24 @@
 <div class="container">
   <div class="bubble-sort-title">
-    <h2>Bubble Sort</h2> <a href="#modal1"><img class="info-png" src="info.png" alt="info tag"></a>
+
+    <h2>Bubble Sort</h2>
+
+    <a href="#modal1" class="modal-trigger"><img class="info-png" src="info.png" alt="info tag"></a>
+
     <div id="modal1" class="modal">
+
       <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <p>This is a demonstration of bubble sort. I built this using a Rails backend, ReactJS, and MaterializeCSS for styling. Everytime you click on the button, it will return a single swap until the entire array is sorted.</p>
       </div>
+
       <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">ok</a>
       </div>
+
     </div>
+
   </div>
 
   <%= react_component 'Search', arr: @arr %>
+
 </div>
