@@ -42,8 +42,13 @@ class Search extends React.Component{
   render(){
     return(
       <div>
-        <div className = "row" onClick={(event) => this.bubbleSort(event)}>
-          <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[0]} </div>
+        <div className = "row sort-button-container">
+          <div className = "col s12 m12 l12 center-align">
+            <button type="button" className="waves-light btn center-align" onClick={(event) => this.bubbleSort(event)}>Click to Sort!</button>
+          </div>
+        </div>
+        <div className = "row">
+          <div className = "col s1 m1 l1 search-array-block z-depth-1 offset-s1 offset-m1 offset-l1"> {this.state.arr[0]} </div>
           <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[1]} </div>
           <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[2]} </div>
           <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[3]} </div>
@@ -55,7 +60,7 @@ class Search extends React.Component{
           <div className = "col s1 m1 l1 search-array-block z-depth-1"> {this.state.arr[9]} </div>
         </div>
         <div className = "row">
-          <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[0]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
+          <div className = "col s1 m1 l1 arrows-container offset-s1 offset-m1 offset-l1"><img style = {{"display" : this.state.arrowArray[0]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
           <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[1]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
           <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[2]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
           <div className = "col s1 m1 l1 arrows-container"><img style = {{"display" : this.state.arrowArray[3]}} className = "crossed-arrows" src = "crossed_arrows.png"/></div>
